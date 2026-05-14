@@ -1,0 +1,23 @@
+{
+  "name": "elevator",
+  "version": "1.0.0",
+  "description": "Multi-elevator control system with LOOK scheduling and cost-based dispatch",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "vite sim",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "example": "tsc -p tsconfig.examples.json && node dist/examples/basic-simulation.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "@vitest/coverage-v8": "^4.1.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.13",
+    "vitest": "^4.1.6"
+  }
+}
