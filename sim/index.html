@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>elevator — simulation</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app" style="display:flex;flex-direction:column;height:100%;">
+    <header>
+      <h1>elevator</h1>
+      <div id="tick-badge">Tick <span id="tick-count">0</span></div>
+    </header>
+
+    <main>
+      <!-- Building visualization -->
+      <section id="building-wrap">
+        <div id="building"></div>
+      </section>
+
+      <!-- Controls -->
+      <aside id="controls">
+        <section class="panel">
+          <h2>Hall Call</h2>
+          <div class="row">
+            <label>Floor
+              <select id="hall-floor"></select>
+            </label>
+            <div class="btn-group">
+              <button id="btn-pickup-up" class="dir-btn up">▲ Up</button>
+              <button id="btn-pickup-down" class="dir-btn dn">▼ Down</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Destination</h2>
+          <div class="row">
+            <label>Elevator
+              <select id="dest-elevator"></select>
+            </label>
+            <label>Floor
+              <select id="dest-floor"></select>
+            </label>
+            <button id="btn-destination" class="dir-btn dest">→ Go</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Simulation</h2>
+          <div class="row">
+            <button id="btn-step">Step ▶</button>
+            <button id="btn-play" class="play">Auto ▶▶</button>
+            <button id="btn-reset" class="reset">↺ Reset</button>
+          </div>
+          <div class="row speed-row">
+            <label>Speed
+              <input type="range" id="speed" min="1" max="10" value="4" />
+            </label>
+            <span id="speed-label">4 fps</span>
+          </div>
+        </section>
+
+        <section class="panel" id="log-panel">
+          <h2>Log</h2>
+          <ul id="log"></ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>
